@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Accueil Pompon et Ronron{%  endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/index.js') }}"></script>{% endblock %}
+
+{% block body %}
+    <!-- Partie header de la page-->
+    <div class="container-fluid titre">
+        <div class="container-fluid" style="height: 75px">
+    {% include('_navbar.html.twig') %}
+        </div>
+
+    <header class="row" id="header">
+<div class="container">
+    <div class="col-md-6 col-xs-12 col-lg-6" id="titre_header">
+        <h1 class="font-weight-bold text-primary text-center">La maison de Ronron et ses amis</h1>
+        <p text-justify>Une pension de bien être pour chat afin de permettre de partir en vacance tranquille.
+        Nelly et Guillaume vous feront une joie de vous faire découvrir leur cocon.</p>
+    </div>
+</div>
+    </header>
+
+    </div>
+    <!-- Partie 1 : valeurs -->
+    <div class="container-fluid" id="valeurs">
+        <div class="container" >
+            <div class="row" id="valeurs_titre">
+                <div class="col-xs-12 col-md-12 col-lg-12 text-center">
+                <h1 class="font-weight-bold ">QUALITE ET CONFIANCE</h1>
+                <hr class="col-xs-2 col-md-2 col-lg-2">
+                </div>
+            </div>
+            <div class="row pb-3" id="valeurs_body">
+                <div class="col-md-4 col-lg-4 col-xs-12 ">
+                <div class="text-center "><i data-feather="award"></i></div>
+                    <div class=" text-center">
+                        <p><b>PROFESSIONNALISME </b></p>
+                        <p>Certificat de capacité animale</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xs-12  ">
+                <div class="text-center "><i data-feather="award"></i></div>
+                    <div class=" text-center">
+                        <p><b>PASSION </b></p>
+                        <p>L'amour des animaux est le coeur de mon métier</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xs-12 ">
+                <div class="text-center "><i data-feather="star"></i></div>
+                    <div class=" text-center">
+                        <p><b>EXCELLENCE </b></p>
+                        <p>Tout est mis en place pour un séjour apaisé et confortable : câlins, espaces intérieurs et extérieurs douillets, ...</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Partie infos : map + horaires -->
+
+    <div class="container-fluid" id="informations">
+        <div class="container">
+
+                <h1 class="text-center col-xs-12 col-md-12 col-lg-12 col-sm-12" id="informations_title">Informations</h1>
+            <div class="row justify-content-center">
+                <div class=" jumbotron col-xs-8 col-md-8 col-sm-8 col-lg-8" id="informations_body">
+                    <h4><b>Coordonnées</b></h4>
+                    <div class="row">
+                    <div class=" col-xs-12 col-md-10 col-sm-12 col-lg-7 map-container " style="height: 385px" >
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.959579660751!2d-1.5218277843492172!3d48.18813027922749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ed08799527f7f%3A0x4c81d880aa41e613!2sRue%20de%20Mi-For%C3%AAt%2C%2035340%20Liffr%C3%A9!5e0!3m2!1sfr!2sfr!4v1567350461263!5m2!1sfr!2sfr" frameborder="0" style="border:0;" allowfullscreen="allowfullscreen"></iframe>
+                    </div>
+                    <div class=" col-xs-12 col-md-10 col-sm-12 col-lg-4  " style=" margin-left: 5px">
+                        <i data-feather="calendar"></i> Horaires d'accueil
+
+                    </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class=" col-xs-12 col-md-8 m-auto col-sm-12 col-lg-8" style=" margin-left: 5px">
+                            <div class="text-center"> <i data-feather="calendar"></i> Heures d'ouvertures</div>
+                            <table class="table table-borderless">
+                                <tbody>
+                                <tr id="lundi">
+                                    <td>Lundi</td>
+                                    <td>8h - 19h</td>
+                                </tr>
+                                <tr id="mardi">
+                                    <td>Mardi</td>
+                                    <td>8h - 19h</td>
+                                </tr>
+                                <tr id="mercredi">
+                                    <td>Mercredi</td>
+                                    <td>8h - 19h</td>
+                                </tr>
+                                <tr id="jeudi">
+                                    <td>Jeudi</td>
+                                    <td>8h - 19h</td>
+                                </tr>
+                                <tr id="vendredi">
+                                    <td>Vendredi</td>
+                                    <td>8h - 19h</td>
+                                </tr>
+                                <tr id="samedi">
+                                    <td>Samedi</td>
+                                    <td>8h - 19h</td>
+                                </tr>
+                                <tr id="dimanche">
+                                    <td>Dimanche</td>
+                                    <td>8h - 19h</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Partie Footer de la page-->
+        <footer class="container-fluid footer">
+            {% include('_footer.html.twig') %}
+
+        </footer>
+
+
+
+
+{% endblock %}
